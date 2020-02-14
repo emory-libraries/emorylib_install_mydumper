@@ -9,7 +9,10 @@ mydumper_os: el7
 mydumper_architecture: x86_64
 mydumper_filetype: rpm
 
-mydumper_download_url: < 
+
+mydumper_url: < 
   {{ mydumper_base_url }}/v{{ mydumper_version }}
   /mydumper-{{ mydumper_version }}-{{ mydumper_build }}.
   {{ mydumper_os }}.{{ mydumper_architecture }}.{{ mydumper_filetype }}
+
+mydumper_download_url: '{{ mydumper_url | join () }}'
