@@ -3,6 +3,7 @@
 - name: Include tasks for mydumper check
   include_tasks:
     file: check-mydumper.yml
+  tags: delete-mydumper
 
 - name: Include tasks to uninstall mydumper
   include_tasks:
