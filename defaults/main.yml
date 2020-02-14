@@ -1,2 +1,4 @@
 ---
 # defaults file for emorylib_install_mydumper
+
+mydumper_version: '0.9.5'
