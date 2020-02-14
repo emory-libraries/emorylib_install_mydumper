@@ -2,7 +2,7 @@
 # tasks file for emorylib_install_mydumper
 - name: Include tasks for mydumper check
   include_tasks:
-    file: check_mydumper.yml
+    file: check-mydumper.yml
 
 - name: Include tasks to uninstall mydumper
   include_tasks:
