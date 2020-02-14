@@ -12,5 +12,5 @@
 
 - name: Set fact for mydumper version match
   set_fact:
-    __mydumper_version_match: '{{ __mydumper_version is version ("9.8", "==") }}'
+    __mydumper_version_match: '{{ __mydumper_version is version (mydumper_version, "==") }}'
   when: __mydumper_installed
