@@ -11,3 +11,8 @@
       tags: delete-mydumper
   when: not __mydumper_version_match | d (True) or __uninstall_mydumper | d (False)
   tags: delete-mydumper
+
+- name: Include tasks to install mydumper
+  include_tasks:
+    file: install-mydumper.yml
+  when: not __mydumper_installed and not __uninstall_mydumper | d (False)
