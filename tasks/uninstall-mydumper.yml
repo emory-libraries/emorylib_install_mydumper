@@ -5,9 +5,6 @@
     state: absent
   register: mydumper_uninstall
 
-- debug:
-    var: mydumper_uninstall
-
 - name: Change logic variable when mydumper is uninstalled
   set_fact:
     __mydumper_installed: false
