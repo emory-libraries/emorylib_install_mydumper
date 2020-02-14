@@ -15,4 +15,4 @@ mydumper_url_list:
   - '/mydumper-{{ mydumper_version }}-{{ mydumper_build }}.'
   - '{{ mydumper_os }}.{{ mydumper_architecture }}.{{ mydumper_filetype }}'
 
-mydumper_download_url: '{{ mydumper_url | join () }}'
+mydumper_download_url: '{{ mydumper_url_list | join () }}'
