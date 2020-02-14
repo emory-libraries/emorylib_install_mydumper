@@ -9,5 +9,5 @@
     file: uninstall-mydumper.yml
     apply:
       tags: delete-mydumper
-  when: not __mydumper_version_match | d (True) or __mydumper_force_delete | d (False)
+  when: not __mydumper_version_match | d (True) or __uninstall_mydumper | d (False)
   tags: delete-mydumper

@@ -16,7 +16,7 @@
 
 - name: Set fact to force delete mydumper
   set_fact:
-    __mydumper_force_delete: true
+    __uninstall_mydumper: true
   tags: 
     - never
     - delete-mydumper
