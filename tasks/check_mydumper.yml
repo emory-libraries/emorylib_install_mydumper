@@ -6,7 +6,6 @@
 
 - name: Set mydumper install status and version
   set_fact:
-    test: '{{ mydumper_check.stderr_lines | length }}'
     __mydumper_installed: '{{ mydumper_check.stderr_lines | length == 0 | ternary (true, false) }}'
     __mydumper_version: '{{ mydumper_check.stdout.split(",")[0].split(" ")[1] | d (False) }}'
 
@@ -14,3 +13,10 @@
   set_fact:
     __mydumper_version_match: '{{ __mydumper_version is version (mydumper_version, "==") }}'
   when: __mydumper_installed
+
+- name: Set fact to force delete mydumper
+  set_fact:
+    __mydumper_force_delete: true
+  tags: 
+    - never
+    - delete-mydumper

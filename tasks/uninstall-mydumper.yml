@@ -1,0 +1,5 @@
+---
+- name: Yum remove mydumper
+  yum:
+    name: mydumper
+    state: absent
